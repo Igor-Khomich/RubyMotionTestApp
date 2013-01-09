@@ -8,6 +8,10 @@ Motion::Project::App.setup do |app|
   #app.vendor_project('vendor/SitecoreMobileSDK.framework', :xcode,
   #      :target => 'SitecoreMobileSDK',
   #      :headers_dir => 'vendor/SitecoreMobileSDK.framework/Headers')
-  
+
+
+
+
+  app.device_family = [:ipad, :iphone]
   app.name = 'HelloMotion'
 end
