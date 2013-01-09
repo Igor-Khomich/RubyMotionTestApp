@@ -18,3 +18,5 @@ app/testflight_launcher.rb
 tap.txt
 
 result.txt
+
+vendor/TestFlight/TestFlight.bridgesupport
