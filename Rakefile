@@ -12,7 +12,7 @@ Motion::Project::App.setup do |app|
 
 
   app.codesign_certificate = 'iPhone Developer: Oleksandr Dodatko (V3H7RLLSD5)'
-  app.provisioning_profile'~/projects/work/cert/Mobile_SDK.mobileprovision'
+  app.provisioning_profile'/Users/cert/Mobile_SDK.mobileprovision'
 
   app.device_family = [:ipad, :iphone]
   app.name = 'HelloMotion'
