@@ -12,3 +12,9 @@ nbproject
 *.sw[po]
 .eprj
 .idea
+
+app/testflight_launcher.rb
+
+tap.txt
+
+result.txt
