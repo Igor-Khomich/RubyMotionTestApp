@@ -15,6 +15,7 @@ class GreenController < UIViewController
     @button.setFrame([[100, 300], [400, 100]])
     @button.setTitle('Push me Blue!', forState:UIControlStateNormal)
     @button.addTarget(self, action:'pushBlue', forControlEvents:UIControlEventTouchUpInside)
+
     self.view.addSubview(@button)
 
   end
