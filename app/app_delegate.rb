@@ -24,6 +24,7 @@ class AppDelegate
     alert = UIAlertView.new
     alert.message = greeting_
     alert.title = "Hello World!"
+    alert.addButtonWithTitle( 'OK' )
     alert.show
 
     #alert_ = UIAlertView.alloc().initWithTitle( 'Hello', message : greeting_, delegate : nil, cancelButtonTitle : 'OK', otherButtonTitles : ['NO'] )
