@@ -8,10 +8,16 @@ require 'motion-testflight'
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   
-  #app.vendor_project('vendor/SitecoreMobileSDK.framework', :xcode,
-  #      :target => 'SitecoreMobileSDK',
-  #      :headers_dir => 'vendor/SitecoreMobileSDK.framework/Headers')
+  #app.vendor_project(
+  #    'vendor/SitecoreMobileSDK.framework', :static,
+  #    :products => ['SitecoreMobileSDK'],
+  #    :headers_dir => 'Headers')
 
+
+  app.vendor_project('vendor/BlockBuilder', :xcode,
+                     :target => 'BlockBuilder',
+                     :configuration => 'Release',
+                     :headers_dir => 'BlockBuilder/Headers')
 
   app.codesign_certificate = 'iPhone Developer: Oleksandr Dodatko (V3H7RLLSD5)'
   app.provisioning_profile = '/Users/cert/Mobile_SDK.mobileprovision'
