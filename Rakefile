@@ -13,6 +13,11 @@ Motion::Project::App.setup do |app|
       :products => ['SitecoreMobileSDK'],
       :headers_dir => 'Headers')
 
+  app.vendor_project(
+      'vendor/BlockBuilderFW.framework', :static,
+      :products => ['BlockBuilderFW'],
+      :headers_dir => 'Headers')
+
   app.frameworks +=
       [ 'MapKit', 'CoreLocation', 'CoreMotion',
         'CoreMedia', 'CoreVideo', 'AVFoundation', 'AudioToolbox',
@@ -32,8 +37,9 @@ Motion::Project::App.setup do |app|
 
   #app.vendor_project('vendor/BlockBuilder', :xcode,
   #                   :target => 'BlockBuilder',
-  #                   :configuration => 'Release',
   #                   :headers_dir => 'BlockBuilder/Headers')
+
+
 
   app.codesign_certificate = 'iPhone Developer: Oleksandr Dodatko (V3H7RLLSD5)'
   app.provisioning_profile = '/Users/cert/Mobile_SDK.mobileprovision'

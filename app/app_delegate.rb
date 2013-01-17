@@ -9,7 +9,27 @@ class AppDelegate
     @greenViewController  = GreenController.alloc.initWithNibName(nil, bundle: nil)
     @navController = UINavigationController.alloc.initWithRootViewController(@greenViewController)
     @window.rootViewController = @navController
-    
+
+    blockBuilder_ = BlockBuilder.new()
+    greetingConstructor_ = blockBuilder_.createHelloBuilder()
+
+    puts greetingConstructor_.class
+    puts greetingConstructor_.methods.sort
+
+    greeting_ = greetingConstructor_.call()
+    puts( greeting_ )
+    puts greeting_.class
+
+
+  alert = UIAlertView.new
+    alert.message = greeting_
+    alert.title = "Hello World!"
+    alert.show
+
+    #alert_ = UIAlertView.alloc().initWithTitle( 'Hello', message : greeting_, delegate : nil, cancelButtonTitle : 'OK', otherButtonTitles : ['NO'] )
+    #alert_.show()
+
+
     #@navController.pushViewController(@redViewController, animated:false)
     #@navController.pushViewController(@blueViewController, animated:false)
 
