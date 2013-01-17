@@ -21,7 +21,7 @@ class AppDelegate
     puts greeting_.class
 
 
-  alert = UIAlertView.new
+    alert = UIAlertView.new
     alert.message = greeting_
     alert.title = "Hello World!"
     alert.show
