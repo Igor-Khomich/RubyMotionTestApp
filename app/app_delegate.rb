@@ -16,7 +16,7 @@ class AppDelegate
     puts greetingConstructor_.class
     puts greetingConstructor_.methods.sort
 
-    greeting_ = greetingConstructor_.call()
+    greeting_ = greetingConstructor_.objc_BlockSend0()
     puts( greeting_ )
     puts greeting_.class
 
