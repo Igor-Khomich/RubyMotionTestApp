@@ -13,10 +13,12 @@ Motion::Project::App.setup do |app|
       :products => ['SitecoreMobileSDK'],
       :headers_dir => 'Headers')
 
-  app.vendor_project(
-      'vendor/BlockBuilderFW.framework', :static,
-      :products => ['BlockBuilderFW'],
-      :headers_dir => 'Headers')
+
+
+  #app.vendor_project(
+  #    'vendor/BlockBuilderFW.framework', :static,
+  #    :products => ['BlockBuilderFW'],
+  #    :headers_dir => 'Headers')
 
   app.frameworks +=
       [ 'MapKit', 'CoreLocation', 'CoreMotion',
@@ -28,16 +30,16 @@ Motion::Project::App.setup do |app|
   # libPath_ = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/'
   libPath_ = '/usr/lib/'
 
-      libs_ = [ 'libz.dylib', 'libsqlite3.dylib', 'libxml2.dylib', 'libc++.dylib', 'libstdc++.dylib', 'libiconv.dylib' ]
+  libs_ = [ 'libz.dylib', 'libsqlite3.dylib', 'libxml2.dylib', 'libc++.dylib', 'libstdc++.dylib', 'libiconv.dylib' ]
   wrappedLibs_ = libs_.map { |libName_| libPath_ + libName_  }
 
   puts wrappedLibs_
 
   app.libs += wrappedLibs_
 
-  #app.vendor_project('vendor/BlockBuilder', :xcode,
-  #                   :target => 'BlockBuilder',
-  #                   :headers_dir => 'BlockBuilder/Headers')
+  app.vendor_project('vendor/BlockBuilder', :xcode,
+                     :target => 'BlockBuilder',
+                     :headers_dir => 'Headers')
 
 
 
@@ -46,7 +48,7 @@ Motion::Project::App.setup do |app|
 
   app.device_family = [:ipad, :iphone]
   app.name = 'HelloMotion'
-
+  app.deployment_target = "5.0"
 
   #app  .testflight.sdk = 'vendor/TestFlight'
   # @adk account
