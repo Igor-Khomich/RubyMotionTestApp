@@ -3,7 +3,7 @@
 
 @interface NSObject (BlockForRuby)
 
--(id)objc_BlockSend0;
--(id)objc_BlockSend:( NSArray* )args_;
+-(void)objc_BlockSend0;
+-(void)objc_BlockSend:( NSArray* )args_;
 
 @end
