@@ -47,6 +47,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		789C3ABC16C0FC4000531294 /* app_delegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = app_delegate.rb; sourceTree = "<group>"; };
+		789C3ABE16C0FC4000531294 /* BlueController.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = BlueController.rb; sourceTree = "<group>"; };
+		789C3ABF16C0FC4000531294 /* GreenController.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = GreenController.rb; sourceTree = "<group>"; };
+		789C3AC016C0FC4000531294 /* RedController.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = RedController.rb; sourceTree = "<group>"; };
+		789C3AC116C0FC4000531294 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Rakefile; path = ../../Rakefile; sourceTree = "<group>"; };
+		789C3AC316C0FC4000531294 /* failure_2_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = failure_2_spec.rb; sourceTree = "<group>"; };
+		789C3AC416C0FC4000531294 /* failure_example_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = failure_example_spec.rb; sourceTree = "<group>"; };
+		789C3AC516C0FC4000531294 /* main_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = main_spec.rb; sourceTree = "<group>"; };
 		7E6F257C16A828DB001886F3 /* libBlockBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlockBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6F257F16A828DB001886F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E6F258316A828DB001886F3 /* BlockBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockBuilder-Prefix.pch"; sourceTree = "<group>"; };
@@ -98,9 +106,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		789C3ABA16C0FC2B00531294 /* Ruby */ = {
+			isa = PBXGroup;
+			children = (
+				789C3ABB16C0FC4000531294 /* app */,
+				789C3AC116C0FC4000531294 /* Rakefile */,
+				789C3AC216C0FC4000531294 /* spec */,
+			);
+			name = Ruby;
+			sourceTree = "<group>";
+		};
+		789C3ABB16C0FC4000531294 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				789C3ABC16C0FC4000531294 /* app_delegate.rb */,
+				789C3ABD16C0FC4000531294 /* controllers */,
+			);
+			name = app;
+			path = ../../app;
+			sourceTree = "<group>";
+		};
+		789C3ABD16C0FC4000531294 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				789C3ABE16C0FC4000531294 /* BlueController.rb */,
+				789C3ABF16C0FC4000531294 /* GreenController.rb */,
+				789C3AC016C0FC4000531294 /* RedController.rb */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		789C3AC216C0FC4000531294 /* spec */ = {
+			isa = PBXGroup;
+			children = (
+				789C3AC316C0FC4000531294 /* failure_2_spec.rb */,
+				789C3AC416C0FC4000531294 /* failure_example_spec.rb */,
+				789C3AC516C0FC4000531294 /* main_spec.rb */,
+			);
+			name = spec;
+			path = ../../spec;
+			sourceTree = "<group>";
+		};
 		7E6F257116A828DB001886F3 = {
 			isa = PBXGroup;
 			children = (
+				789C3ABA16C0FC2B00531294 /* Ruby */,
 				7E6F25AA16A82CD4001886F3 /* Headers */,
 				7E6F258116A828DB001886F3 /* BlockBuilder */,
 				7E6F259616A828DC001886F3 /* BlockBuilderTests */,
