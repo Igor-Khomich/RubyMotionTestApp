@@ -35,8 +35,8 @@ class AppDelegate
     puts 'reader.class   : ' + reader.class.to_s()
     puts 'callback.class : ' + callback.class.to_s()
       
-      #reader.objc_BlockSend( [ callback ] )
-    reader.objc_BlockSend( [ rCallback ] )
+    reader.objc_BlockSend( [ callback ] )
+     #reader.objc_BlockSend( [ rCallback ] )
 
     
       
