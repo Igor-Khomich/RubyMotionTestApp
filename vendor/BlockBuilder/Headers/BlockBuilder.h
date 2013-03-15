@@ -12,8 +12,25 @@
 
 #import <Foundation/Foundation.h>
 
+
+//typedef void (^BBAsyncOpResult)(id result, NSError *error);
+//typedef void (^BBAsyncOp)(id handler);
+//
+//typedef NSString*(^BBStringProducer)(void);
+//
+//@interface BlockBuilder : NSObject
+//
+//-(BBStringProducer)createHelloBuilder;
+//
+//-(id)itemsReaderWithRequest;
+//-(id)itemsReaderCallback;
+//
+//@end
+
+
+
 typedef void (^BBAsyncOpResult)(id result, NSError *error);
-typedef void (^BBAsyncOp)(id handler);
+typedef void (^BBAsyncOp)(BBAsyncOpResult handler);
 
 typedef NSString*(^BBStringProducer)(void);
 
@@ -21,7 +38,7 @@ typedef NSString*(^BBStringProducer)(void);
 
 -(BBStringProducer)createHelloBuilder;
 
--(id)itemsReaderWithRequest;
--(id)itemsReaderCallback;
+-(BBAsyncOp)itemsReaderWithRequest;
+-(BBAsyncOpResult)itemsReaderCallback;
 
 @end

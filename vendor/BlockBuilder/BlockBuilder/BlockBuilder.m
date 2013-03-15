@@ -20,7 +20,8 @@
     };
 }
 
-- (id)itemsReaderWithRequest
+-(BBAsyncOp)itemsReaderWithRequest;
+//- (id)itemsReaderWithRequest
 {
     return ^void( BBAsyncOpResult handler_ )
     {
@@ -28,19 +29,21 @@
         NSLog( @"handler : %@", handler_ );
         NSLog( @"handler class : %@", [ handler_ class ] );
         
-        SEL call_ = @selector(call:);
-        if ( [ handler_ respondsToSelector: call_ ] )
-        {
-            NSLog( @"Ruby block passed. Invoking call..." );
-            id rBlockResult_ = objc_msgSend( handler_, call_, @"ololo", nil );
-            NSLog(@"Ruby block ret : %@", rBlockResult_ );
-        }
-        
+//        SEL call_ = @selector(call:);
+//        if ( [ handler_ respondsToSelector: call_ ] )
+//        {
+//            NSLog( @"Ruby block passed. Invoking call..." );
+//            id rBlockResult_ = objc_msgSend( handler_, call_, @"ololo", nil );
+//            NSLog(@"Ruby block ret : %@", rBlockResult_ );
+//        }
+       
         handler_( @"ololo", nil );
     };
 }
 
--(id)itemsReaderCallback
+
+-(BBAsyncOpResult)itemsReaderCallback;
+//-(id)itemsReaderCallback
 {
     return ^void(id result, NSError *error)
     {
